@@ -1,0 +1,4 @@
+name: AnizottiImages.EXMPL
+version: '${project.version}'
+main: org.cordell.com.anizottiimages.AnizottiImages
+api-version: '1.21'
