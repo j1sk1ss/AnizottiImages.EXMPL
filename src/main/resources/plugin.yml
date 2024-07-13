@@ -2,3 +2,8 @@ name: AnizottiImages.EXMPL
 version: '${project.version}'
 main: org.cordell.com.anizottiimages.AnizottiImages
 api-version: '1.21'
+
+commands:
+  create_image:
+    usage:  /create_image
+    description: create image by maps
