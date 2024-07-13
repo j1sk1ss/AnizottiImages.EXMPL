@@ -15,7 +15,7 @@ public class MapManager {
         var mapItems = new ItemStack[images.length];
 
         for (int i = 0; i < images.length; i++) {
-            byte[] mapData = ImageLoader.convertImageToMap(images[i]);
+            var mapData = ImageLoader.convertImageToMap(images[i]);
 
             var mapView = Bukkit.createMap(world);
             mapView.getRenderers().clear();

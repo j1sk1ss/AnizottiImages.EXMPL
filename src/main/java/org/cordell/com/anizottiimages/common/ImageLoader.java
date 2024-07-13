@@ -22,9 +22,9 @@ public class ImageLoader {
     }
 
     public static BufferedImage[] splitImage(BufferedImage image) {
-        int rows = (int) Math.ceil(image.getHeight() / 128.0);
-        int cols = (int) Math.ceil(image.getWidth() / 128.0);
-        BufferedImage[] images = new BufferedImage[rows * cols];
+        var rows   = (int) Math.ceil(image.getHeight() / 128.0);
+        var cols   = (int) Math.ceil(image.getWidth() / 128.0);
+        var images = new BufferedImage[rows * cols];
 
         for (int y = 0; y < rows; y++) {
             for (int x = 0; x < cols; x++) {
@@ -37,10 +37,11 @@ public class ImageLoader {
         return images;
     }
 
+    @SuppressWarnings("removal")
     public static byte[] convertImageToMap(BufferedImage image) {
-        int width = 128;
-        int height = 128;
-        BufferedImage scaledImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        var width  = 128;
+        var height = 128;
+        var scaledImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         scaledImage.getGraphics().drawImage(image, 0, 0, width, height, null);
 
         byte[] mapData = new byte[width * height];

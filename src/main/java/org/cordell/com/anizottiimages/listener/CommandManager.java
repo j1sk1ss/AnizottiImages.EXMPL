@@ -24,8 +24,8 @@ public class CommandManager implements CommandExecutor {
         }
 
         try {
-            var image = ImageLoader.loadImageFromURL(strings[0]);
-            var images = ImageLoader.splitImage(Objects.requireNonNull(image));
+            var image    = ImageLoader.loadImageFromURL(strings[0]);
+            var images   = ImageLoader.splitImage(Objects.requireNonNull(image));
             var mapItems = Arrays.stream(MapManager.createMaps(images, player.getWorld())).toList();
 
             giveItems(mapItems, player);
